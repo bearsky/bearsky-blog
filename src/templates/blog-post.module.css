@@ -9,6 +9,10 @@
   font-size: 2em
 }
 
+.post-body {
+  text-align: justify;
+}
+
 .post-body img {
   width: auto;
   margin: 0 auto;
