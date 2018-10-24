@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
             {post.publishDate}
           </p>
           <p>
-            {post.author}
+            {post.author.name}
           </p>
           <div
             dangerouslySetInnerHTML={{
@@ -46,7 +46,9 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
-      author
+      author {
+        name
+      }
       heroImage {
         sizes(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulSizes_withWebp
