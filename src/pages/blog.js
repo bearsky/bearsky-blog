@@ -46,7 +46,6 @@ export const pageQuery = graphql`
           author {
             name
           }
-          tags
           heroImage {
             sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulSizes_withWebp
